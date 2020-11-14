@@ -1,0 +1,40 @@
+.content{
+    display:flex;
+    @include flex-align-center;  
+    width:100vw;
+    max-width:100vw;
+    height:100vh;
+    max-height:100vh;
+    background-image: linear-gradient(to top right,#450b7c,#563cc9,#49e9fb);
+    background-image: linear-gradient(to top right, #d51616, #e65533, #5b2dd9);
+
+    &__background{
+        width:100%;
+        height:100%;
+        background-image:url("../img/Header_background-5p.svg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__characters{
+        position:absolute;
+
+        figure{
+            width:25vw;
+            height:25vh;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        &__laptop{
+            background-image:url("../img/Question-mark_illustration_laptop.svg");
+        }
+        &__mobile{
+            background-image:url("../img/Question-mark_illustration_phone.svg");
+            transform: rotate(45deg);
+        }
+    }
+
+}

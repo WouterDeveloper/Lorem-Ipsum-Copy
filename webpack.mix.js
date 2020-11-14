@@ -13,6 +13,11 @@ let mix = require('laravel-mix');
 
 mix.js('src/js/main.js', 'dist/js')
     .sass('src/sass/main.scss', 'dist/css')
+    .options({
+        processCssUrls: false
+    })
+    .copy('src/img/', 'dist/img/', false) // Don't flatten!
+    .copy('src/fonts/', 'dist/fonts/', false) // Don't flatten!
     .setPublicPath('dist');
 
 

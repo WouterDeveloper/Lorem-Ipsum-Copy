@@ -1,3 +1,10 @@
+@mixin flex-align-center{
+    -ms-flex-pack: 50%;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
 @mixin border-radius_rectangle {
     -moz-border-radius: $border-radius-normal;
     -moz-border--radius: $border-radius-normal;
