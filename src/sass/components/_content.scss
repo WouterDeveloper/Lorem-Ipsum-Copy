@@ -1,3 +1,17 @@
+.top{
+    height:40%;
+    top:0;
+    left:0;
+    background-image:url("../img/Top_background-5p.svg");
+}
+
+.bottom{
+    height:30%;
+    bottom:0;
+    left:0;
+    background-image:url("../img/Bottom_background-5p.svg");
+}
+
 .content{
     display:flex;
     @include flex-align-center;  
@@ -12,9 +26,8 @@
     background-image: linear-gradient(to right bottom, #0086d4, #027dc7, #0375bb, #046cae, #0464a2, #055a97, #06508c, #064681, #0a3873, #0e2b65, #101d57, #101048);
 
     &__background{
+        position:absolute;
         width:100%;
-        height:100%;
-        background-image:url("../img/Header_background-5p.svg");
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
