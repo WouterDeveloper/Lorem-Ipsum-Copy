@@ -71,9 +71,10 @@ h1,
 @mixin h2 {
     font-family: $font-primary;
     line-height: $font-heading-line-height;
-    font-size: $font-size-1;
+    font-size: $font-size-0;
     text-transform: unset;
     font-weight:$font-weight-light;
+    color: $font-color-primary;
 }
 
 h2,

@@ -1,36 +1,44 @@
 .top{
-    height:40%;
-    top:0;
-    left:0;
-    background-image:url("../img/Top_background-5p.svg");
+    grid-row:1;
+    background-image:url("../img/Top_background.svg");
 }
 
-.bottom{
-    height:30%;
-    bottom:0;
-    left:0;
-    background-image:url("../img/Bottom_background-5p.svg");
+.bottom{           
+    grid-row:3;
+    background-image:url("../img/Bottom_background.svg");
 }
 
 .content{
-    display:flex;
-    @include flex-align-center;  
+    display:grid;
+    // @include flex-align-center;  
+    grid-template-columns: repeat(5, 1fr);  
+    grid-template-rows: 1fr 3fr 2fr;
     width:100vw;
     max-width:100vw;
     height:100vh;
     max-height:100vh;
-    background-image: linear-gradient(to top right,#450b7c,#563cc9,#49e9fb);
-    background-image: linear-gradient(to top right, #d51616, #e65533, #5b2dd9);
-    background-image: linear-gradient(to right top, #24044c, #290459, #2e0467, #330575, #380583, #3a0a8b, #3c0f94, #3d149c, #3c1ca0, #3b23a4, #3b29a8, #3a2fac);
-    background-image: linear-gradient(to right top, #2a2a72, #2e4595, #2d62b8, #2480db, #009ffd);
-    background-image: linear-gradient(to right bottom, #0086d4, #027dc7, #0375bb, #046cae, #0464a2, #055a97, #06508c, #064681, #0a3873, #0e2b65, #101d57, #101048);
+    // background-image: linear-gradient(to top right,#450b7c,#563cc9,#49e9fb);
+    // background-image: linear-gradient(to top right, #d51616, #e65533, #5b2dd9);
+    // background-image: linear-gradient(to right top, #24044c, #290459, #2e0467, #330575, #380583, #3a0a8b, #3c0f94, #3d149c, #3c1ca0, #3b23a4, #3b29a8, #3a2fac);
+    // background-image: linear-gradient(to right top, #2a2a72, #2e4595, #2d62b8, #2480db, #009ffd);
+    // background-image: linear-gradient(to right bottom, #0086d4, #027dc7, #0375bb, #046cae, #0464a2, #055a97, #06508c, #064681, #0a3873, #0e2b65, #101d57, #101048);
 
     &__background{
-        position:absolute;
+        // position:absolute;
+        grid-column: 1 / 6;
         width:100%;
+        height:100%;
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
+    }
+
+    &__textwrapper{
+        grid-column: 2 / 5;
+        grid-row:2;
+        background: white;
+        height:100%;
+        text-align: center;
     }
 
     &__characters{
