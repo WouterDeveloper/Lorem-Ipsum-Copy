@@ -1,11 +1,20 @@
-.top{
-    grid-row:1;
-    background-image:url("../img/Top_background.svg");
-}
 
 .bottom{           
     grid-row:3;
     background-image:url("../img/Bottom_background.svg");
+}
+
+.background{
+    position:absolute;
+    width:100vw;
+    height:100vh;
+    top:0;
+    left:0;
+    //background-image:url("../img/background.svg");
+    background-image:url("../img/background.png");
+    background-image:url("../img/background_v2.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .content{
@@ -16,7 +25,7 @@
     width:100vw;
     max-width:100vw;
     height:100vh;
-    max-height:100vh;
+    max-height:100vh; 
     // background-image: linear-gradient(to top right,#450b7c,#563cc9,#49e9fb);
     // background-image: linear-gradient(to top right, #d51616, #e65533, #5b2dd9);
     // background-image: linear-gradient(to right top, #24044c, #290459, #2e0467, #330575, #380583, #3a0a8b, #3c0f94, #3d149c, #3c1ca0, #3b23a4, #3b29a8, #3a2fac);
@@ -24,13 +33,38 @@
     // background-image: linear-gradient(to right bottom, #0086d4, #027dc7, #0375bb, #046cae, #0464a2, #055a97, #06508c, #064681, #0a3873, #0e2b65, #101d57, #101048);
 
     &__background{
-        // position:absolute;
-        grid-column: 1 / 6;
-        width:100%;
-        height:100%;
-        background-position: center center;
+        position:absolute;
+       // grid-column: 1 / 6;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
+
+        &__middle_top{
+            width:70vw;
+            height:65vh;
+            top:0;
+            right:10vw;
+            background-image:url("../img/Illustration_top_middle.svg");
+            background-position: right;    
+        }
+
+        &__bottom_left{
+            width:40vw;
+            height:80vh;
+            bottom:0;
+            left:0;
+            background-image:url("../img/Illustration_bottom_left.svg");
+            background-position: right;
+            background-size: cover;
+        }
+
+        &__bottom_right{
+            width:40vw;
+            height:50vh;
+            bottom:0;
+            right:0;
+            background-image:url("../img/Illustration_bottom_right.svg");
+            background-position: right;
+        }
     }
 
     &__textwrapper{
