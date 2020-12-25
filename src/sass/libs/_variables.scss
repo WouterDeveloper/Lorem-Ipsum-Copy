@@ -1,33 +1,22 @@
 // Colors
-$bg-color-primary:                #ffffff; 
-$bg-color-secondary:              #E8E8E8;
-$bg-color-tertiary:               #C2C2C2;
-$bg-color-quaternary:             #F8F8F8;
-
+$bg-color-primary:                #ffffff;        
 $highlight-color-primary:         #56B884;
 
 $gradient-color-primary:          #F8364E;
 $gradient-color-secondary:        #5697B8;
 $gradient-color-tertiary:         #353C7B;
 
-$gradient-color-primary-translucent:         rgba(#F8364E, .8);
-$gradient-color-secondary-translucent:        rgba(#5697B8, .8);
-$gradient-color-tertiary-translucent:         rgba(#353C7B, .8);
-$highlight-color-primary-translucent:         rgba(#56B884, .8);
-
 
 
 // Fonts
-$font-primary:                      'Montserrat-Light', sans-serif; 
-$font-secondary:                    'Hikou-Regular', sans-serif; 
-$font-tertiary:                     'Hikou-Light', sans-serif; 
+$font-primary:                      'Poppins', sans-serif;
+$font-secondary:                    'Playfair Display', serif; 
 $font-quaternary:                   'Hikou-Outline', sans-serif; 
-$font-color-primary:              #393939;
-$font-color-secondary:            #636363;
-$font-color-tertiary:             #ffffff;
+$font-color-primary:              #2A2A2A; //#393939
+$font-color-secondary:            #FF3E5E;
+$font-color-tertiary:             #20BFD0;
+$font-color-quaternary:            #ffffff;
 
-$font-lineheight:                   1.56rem;
-$font-lineheight-small:             1rem;
 $font-size:                         16px;
 $font-weight-light:                 300;
 $font-weight-normal:                400;
