@@ -164,3 +164,24 @@
     from {background-color: $font-color-secondary;}
     to {background-color: $font-color-tertiary;}
   }
+
+
+  @-webkit-keyframes move-left {
+    0%   {  }
+    100% {  margin-right:50%; }
+  }
+  
+  @-moz-keyframes move-left {
+    0%   {  }
+    100% {  margin-right:50%; }
+  }
+  
+  @-o-keyframes move-left {
+    0%   {  }
+    100% {  margin-right:50%; }
+  }
+  
+  @keyframes move-left {
+    0%   {  }
+    100% {  margin-right:50%; }
+  }

@@ -70,7 +70,7 @@
             animation-fill-mode: forwards;
 
             .content__cta__dot{
-                animation: scale-times-100 1s,opacity-down 1s;
+                animation: move-left 1s, opacity-down 1s, scale-times-100 1s;
                 animation-fill-mode: forwards;
                 // height: 15px;
                 // width: 15px;
