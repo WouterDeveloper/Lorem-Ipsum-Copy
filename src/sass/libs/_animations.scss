@@ -106,3 +106,61 @@
         bottom: 20px;
      }
   }
+
+  @-webkit-keyframes opacity-down {
+    0%   { opacity: 1; }
+    50%   { opacity: 0.3; }
+    100% { opacity: 0; }
+  }
+  @-moz-keyframes opacity-down {
+    0%   { opacity: 1; }
+    50%   { opacity: 0.3; }
+    100% { opacity: 0; }
+  }
+  @-o-keyframes opacity-down {
+    0%   { opacity: 1; }
+    50%   { opacity: 0.3; }
+    100% { opacity: 0; }
+  }
+  @keyframes opacity-down {
+    0%   { opacity: 1; }
+    50%   { opacity: 0.3; }
+    100% { opacity: 0; }
+  }
+
+  @-webkit-keyframes scale-times-100 {
+    0%   { transform: scale(1); }
+    100% { transform: scale(100); }
+  }
+  @-moz-keyframes scale-times-100 {
+    0%   { transform: scale(1); }
+    100% { transform: scale(100); }
+  }
+  @-o-keyframes scale-times-100 {
+    0%   { transform: scale(1); }
+    100% { transform: scale(100); }
+  }
+  @keyframes scale-times-100 {
+    0%   { transform: scale(1); }
+    100% { transform: scale(100); }
+  }
+
+  @-webkit-keyframes background-color-tertiary {
+    from {background-color: $font-color-secondary;}
+    to {background-color: $font-color-tertiary;}
+  }
+  
+  @-moz-keyframes background-color-tertiary {
+    from {background-color: $font-color-secondary;}
+    to {background-color: $font-color-tertiary;}
+  }
+  
+  @-o-keyframes background-color-tertiary {
+    from {background-color: $font-color-secondary;}
+    to {background-color: $font-color-tertiary;}
+  }
+  
+  @keyframes background-color-tertiary {
+    from {background-color: $font-color-secondary;}
+    to {background-color: $font-color-tertiary;}
+  }
