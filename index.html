@@ -9,11 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet"> 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
 </head>
 <body>
     <main class="page">
-        <!-- <div class="container grid"> -->   
         <section class="content">
               <article class="content__intro">
                 <h1 class="content__intro__title">
@@ -26,38 +25,20 @@
                     <span>One click</span> is all you need! 
                 </h2>
               </article>
-              <button class="content__cta">
-                  <h3>Press to copy
+              <button onclick="copyText('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.')"
+               class="content__cta ">
+                <h3 id="content__cta__text">Press to copy
                     <div class="content__cta__dot"></class>
                 </h3>
-                <!-- <h3>Press to copy<span>.</span></h3> -->
             </button>
-               <!-- <div class="content__background content__background__middle_top"></div> 
-               <div class="content__background content__background__bottom_left"></div> 
-               <div class="content__background content__background__bottom_right"></div>  -->
-
-
-                <!-- <header class="content__header">
-                    <figure class="content__header__logo"></figure>
-                </header>   -->
-                <!-- <article class="content__textwrapper">
-                    <headder>
-                        <h1>The easiest Lorem Ipsum copy tool</h1>
-                        <h2>This tool lets you easily choose your Lorem Ipsum and copy it with 1 button push</h2>
-                    </headder>
-                    <h2></h2>
-                </article> -->
-                <!-- <div class="content__characters">
-                    <figure class="content__characters__laptop"></figure>
-                    <figure class="content__characters__mobile"></figure>
-                </div> -->
-                <!-- <div class="content__background--bottom"></div>
-                <footer class="content__background bottom">
-                </footer> -->
-            </section>      
+            </section>               
         <div class="background"></div>
-        <!-- </div>              -->
     </main>
-<script src="dist/js/main.js"></script>
+    <script>
+        function copyText(text) {
+        navigator.clipboard.writeText(text);
+        document.getElementById("content__cta__text").innerHTML = "Copied";
+        }
+    </script>
 </body>
 </html>
