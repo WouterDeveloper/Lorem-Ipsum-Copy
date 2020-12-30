@@ -10,11 +10,27 @@
     height:100vh;
     top:0;
     left:0;
-    background-image:url("../img/background.svg");
-    background-image:url("../img/background_v2.svg");
+    background-image:url("../img/background_desktop.svg");
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 0;
+
+    @media all and (min-width: $breakpoint-xxs) and (max-width: $breakpoint-sm) {                          
+        background-image:url("../img/background_phone.svg");
+    }
+
+    @media all and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {                          
+        background-image:url("../img/background_tablet.svg");
+    }
+
+    @media all and (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {                          
+        background-image:url("../img/background_laptop.svg");
+    }
+
+    @media all and (min-width: $breakpoint-xl) and (max-width: $breakpoint-xxl) {                          
+        background-image:url("../img/background_desktop.svg");
+    }
+
 }
 
 .content{
@@ -29,11 +45,6 @@
     margin-top:5vh;
     overflow:hidden;
 
-    @media all  and (max-width: $breakpoint-lg) {     
-        grid-template-columns: 1.5fr 1fr 1fr;   
-        margin-left:20vw;         
-    }
-
     @media all and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {                          
         margin-left:15vw;
     }
@@ -46,16 +57,24 @@
     &__intro{
         grid-column: 1;
         grid-row:1;
-        max-height:70vh;
+        max-height:65vh;
         text-align: left;
+
+        @media all and (min-width: $breakpoint-xxs) and (max-width: $breakpoint-sm) {                          
+            margin-top:10vh;
+        }
 
         &__title{
 
-            @media all and (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {                          
+            @media all and (min-width: $breakpoint-xxs) and (max-width: $breakpoint-sm) {                          
+                font-size: $font-size-2;
+            }
+
+            @media all and (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {                          
                 font-size: $font-size-3;
             }
 
-            @media all and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {                          
+            @media all and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {                          
                 font-size: $font-size-4;
             }
 
@@ -72,8 +91,8 @@
             width:75%;
             margin-top: -5vh;
 
-            @media all and (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {                          
-                font-size: $font-size--2;
+            @media all and (min-width: $breakpoint-xxs) and (max-width: $breakpoint-md) {                          
+               display:none;
             }
 
             @media all and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {                          
@@ -101,14 +120,17 @@
         border-radius: 50px;
         z-index: 1;
 
+        @media all and (min-width: $breakpoint-xxs) and (max-width: $breakpoint-sm) {                          
+            width:150%;
+        }
+
+
         @media all and (max-width: $breakpoint-md) {                          
             grid-column: 1;
         }
 
         @media all and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {                          
-            grid-column: 3;         
-            width:80%;
-            margin:0% 10%;
+            grid-column: 3;        
         }
 
         @media all and (min-width: $breakpoint-lg) and (max-width: $breakpoint-xxl) {                          
