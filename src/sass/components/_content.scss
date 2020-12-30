@@ -10,7 +10,7 @@
     height:100vh;
     top:0;
     left:0;
-    background-image:url("../img/background.png");
+    background-image:url("../img/background.svg");
     background-image:url("../img/background_v2.svg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -19,30 +19,72 @@
 
 .content{
     display:grid;
-    grid-template-columns: repeat(6, 1fr);  
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;  
+    grid-template-rows: 85fr 10fr 5fr;  
     width:70vw;
     max-width:70vw;
     height:80vh;
     max-height:80vh;
     margin-left:15vw;
-    margin-top:10vh;
+    margin-top:5vh;
+    overflow:hidden;
 
+    @media all  and (max-width: $breakpoint-lg) {     
+        grid-template-columns: 1.5fr 1fr 1fr;   
+        margin-left:20vw;         
+    }
+
+    @media all and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {                          
+        margin-left:15vw;
+    }
+
+    @media all and (min-width: $breakpoint-md) and (max-width: $breakpoint-xl) {                          
+        width:80vw;
+        max-width:80vw;
+    }
 
     &__intro{
-        grid-column: 1 / 3;
+        grid-column: 1;
+        grid-row:1;
+        max-height:70vh;
         text-align: left;
 
         &__title{
-            //@include text-crop;
+
+            @media all and (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {                          
+                font-size: $font-size-3;
+            }
+
+            @media all and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {                          
+                font-size: $font-size-4;
+            }
+
+            @media all and (min-width: $breakpoint-lg) and (max-width: $breakpoint-xxl) {                          
+                font-size: $font-size-6;
+            }
+
             span{
               color:  $font-color-secondary;
             }
         }
 
         &__text{
-            width:50%;
+            width:75%;
             margin-top: -5vh;
-           // @include text-crop;
+
+            @media all and (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {                          
+                font-size: $font-size--2;
+            }
+
+            @media all and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {                          
+                margin-top: -3vh;
+                font-size: $font-size--1;
+            }
+
+            @media all and (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {                          
+                font-size: $font-size-0;
+            }
+
             span{
               color:  $font-color-tertiary;
             }
@@ -50,17 +92,29 @@
     }
 
     &__cta{
+        grid-row:2;
         display:flex;
         justify-content: center;
-        align-self:flex-end;
-        justify-self: center;
-        grid-column: 4 / 6;
-        margin-bottom:10vh;
-        padding: 0 3rem;
+        grid-column: 3;
         text-align: center;
         background-color: $font-color-secondary;
         border-radius: 50px;
         z-index: 1;
+
+        @media all and (max-width: $breakpoint-md) {                          
+            grid-column: 1;
+        }
+
+        @media all and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {                          
+            grid-column: 3;         
+            width:80%;
+            margin:0% 10%;
+        }
+
+        @media all and (min-width: $breakpoint-lg) and (max-width: $breakpoint-xxl) {                          
+            grid-column: 4;
+        }
+
         span{
             color:  $font-color-tertiary;
          }
